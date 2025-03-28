@@ -1,10 +1,13 @@
 import Country from "./Country";
 
-function CountriesList() {
+function CountriesList({ countries }) {
   return (
     <ul>
-      <Country />
+      {countries.map((country) => {
+        return <Country infoCountry={country} />;
+      })}
     </ul>
   );
 }
+
 export default CountriesList;
